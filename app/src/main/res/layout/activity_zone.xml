@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8C43C"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:id="@+id/image_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/up111p" />
+
+                <TextView
+                    android:id="@+id/up_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/museum"
+                    android:text="위치 소개"
+                    android:textAlignment="center"
+                    android:textColor="#F8C43C"
+                    android:textSize="40dp" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="158dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/fontstyle"
+                android:text="카메라인식"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="italic"
+                app:backgroundTint="#FFC107" />
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.naver.maps.map.MapFragment"
+                android:layout_width="410dp"
+                android:layout_height="169dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/test_9"
+                android:layout_width="420dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="40dp"
+                android:background="#020202"
+                android:fontFamily="@font/fontstyle"
+                android:text="  주변문화재"
+                android:textColor="#F8C43C"
+                android:textSize="40sp"
+                android:textStyle="italic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:nestedScrollingEnabled="false"/>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
+
+
+
